@@ -16,4 +16,8 @@ merged = pd.DataFrame()
 merged = merged.append(to_new, ignore_index=False)
 merged.to_excel("merged.xlsx")
 print(to_new.head())
+
+s=convert_dtypes(pd.to_numeric(work_sheet["Инв. номер"], downcast='integer' ,errors='coerce'))
+d=pd.to_numeric(inv_numb["Инв. номер"], downcast='integer', errors='coerce')
+a=s.convert_dtypes()
 """
